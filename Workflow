@@ -824,7 +824,7 @@ load("tfs_2020.rda")
 expmat<-as.matrix(seuset@assays$RNA@data)
 #dim(expmat) # 13927  2143
 regulon<-corto(expmat,centroids = centroids,nbootstraps = 1000,nthreads = 6)
-save("markdown/results/regulon.rda")
+save(regulon,file="markdown/results/regulon.rda")
 
 # visualize the regulon in Cytoscape
 fname<-"markdown/results/network.txt"
